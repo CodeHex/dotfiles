@@ -8,17 +8,17 @@ function log_err { print -P "%F{red}$1%f"; }
 function updatemac {
 	log_ok "💻 Updating Mac OSX software..."
 	if softwareupdate -l 2>&1 | grep -q 'No new software available.'; then
-  		log_info "no new software to install"
+		log_info "no new software to install"
 	else
-  		softwareupdate -l
-  		log_ok "\nupdate all? %F{blue}(y/n)%f"
-  		read -sk1
-  		if [[ $REPLY == "y" ]] then
-    			softwareupdate -ia
-    			log_ok "✅ Mac software updated"
-  		else
-    			log_warn "⚠️  Skipping softwate updates"
-  		fi
+		softwareupdate -l
+		log_ok "\nupdate all? %F{blue}(y/n)%f"
+		read -sk1
+		if [[ $REPLY == "y" ]] then
+				softwareupdate -ia
+				log_ok "✅ Mac software updated"
+		else
+				log_warn "⚠️  Skipping softwate updates"
+		fi
 	fi
 }
 
@@ -76,7 +76,7 @@ if [[ -f ~/.ssh/id_ed25519 ]]; then
 else
 	mkdir -p /Users/ben/dev
 	if [[ -z "${GITHUB_EMAIL}" ]]; then
-  		log_err "❌ Unable to setup Github, GITHUB_EMAIL not set"
+		log_err "❌ Unable to setup Github, GITHUB_EMAIL not set"
 		exit 1
 	fi
 	log_ok "🔑 Generating SSH key (ed25519, 256 bit passphrase)..."
