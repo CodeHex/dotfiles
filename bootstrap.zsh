@@ -30,8 +30,9 @@ function installvscodeext {
 	fi
 }
 
-# Read secrets/config from env file
-source ./.env
+# Configure current run
+CONFIGURE_MAC="false"
+NODE_VERSION="16.4.2"
 
 # Update mac software
 updatemac
@@ -173,7 +174,7 @@ installvscodeext mohsen1.prettify-json $VSCODE_LIST
 installvscodeext RobbOwen.synthwave-vscode $VSCODE_LIST    # Run 'Enable Neon Dreams' in VS Code to activate glow
 installvscodeext lehni.vscode-fix-checksums $VSCODE_LIST   # Run 'Fix Checksums: Apply' in VS Code to remove corrupt warning after install Neon Dreams
 
-if nodenv version | grep system; then 
+if ! nodenv version | grep -q $NODE_VERSION; then 
 	log_ok "🧊 Installing Node "
 	nodenv install $NODE_VERSION
 	nodenv global $NODE_VERSION
