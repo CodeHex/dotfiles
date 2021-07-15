@@ -7,7 +7,7 @@ brew "gh"                           # Github CLI
 brew "nodenv"                       # Node package manager
 brew "python"                       # Python for powerline
 
-
+tap "homebrew/cask"
 cask "rectangle"                # Window management app (like Spectacle)
 cask "iterm2"                   # Terminal replacement
 cask "visual-studio-code"       # VSCode editor
@@ -18,7 +18,7 @@ cask "1password"                # Password manager
 cask "zoom"                     # Zoom video conferencing
 cask "spotify"                  # Music
 cask "twitch"                   # Twitch
-
+cask "obsidian"                 # Note taking
 
 tap "homebrew/cask-fonts"
 cask "font-jetbrains-mono"      # Coding font
