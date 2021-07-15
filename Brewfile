@@ -18,6 +18,7 @@ cask "1password"                # Password manager
 cask "zoom"                     # Zoom video conferencing
 cask "spotify"                  # Music
 cask "twitch"                   # Twitch
+cask "obsidian"                 # Note taking
 
 tap "homebrew/cask-fonts"
 cask "font-jetbrains-mono"      # Coding font
