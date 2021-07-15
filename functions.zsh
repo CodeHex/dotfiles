@@ -10,7 +10,6 @@ function update_mac_osx_software {
 	log_info " - running $(log_warn '\"softwareupdate -l\"')"
 	if softwareupdate -l 2>&1 | grep -q 'No new software available.'; then
 		log_info " - no new software to install"
-		log_ok "✅ Mac software up to date"
 	else
 		softwareupdate -l
 		log_ok "\nupdate all? %F{blue}(y/n)%f"
@@ -125,8 +124,6 @@ function update_vscode_exts {
 function install_node {
 	local VERSION=$1
 	log_ok "🧊 Installing Node $VERSION..."
-	log_info " - running $(log_warn '\"nodenv global\"')"
-	nodenv global
 	if nodenv global | grep -q $VERSION; then
 		log_info " - node $VERSION already installed" 
 	else

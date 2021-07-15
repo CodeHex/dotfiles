@@ -2,7 +2,7 @@
   "entries": {
     "cask": {
       "visual-studio-code": {
-        "version": "1.58.1",
+        "version": "1.58.2",
         "options": {
           "full_name": "visual-studio-code"
         }
@@ -330,7 +330,7 @@
         "revision": "9e12ac096242ce8df03d76e20fea3248f7da2da8"
       },
       "homebrew/cask": {
-        "revision": "6c73293485c24c5792e2c6305b82515b9a5a519a"
+        "revision": "c5a28c238e286648b2743fb7540a2007b2dfc48d"
       }
     }
   },
@@ -339,7 +339,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.2.2",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "c27a2e15c8ba9f28fac257b198fbc5fd0b652948",
+        "Homebrew/homebrew-core": "214ab8f8c831e7b830d19a96da65571b6aac3221",
         "CLT": "12.5.1.0.1.1623191612",
         "Xcode": "12.5",
         "macOS": "11.4"

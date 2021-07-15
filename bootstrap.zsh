@@ -37,10 +37,12 @@ if ! echo $(pip3 list) | grep -q "powerline-status"; then
 	install_powerline
 fi
 
-# Reload the terminal if the powerline config is updated
-if (update_config_file powerline_config ~/.config/powerline); then
-	source ~/.zshrc
-fi
+# Reload the terminal incase any files are updated
+update_config_file .zprofile ~/.zprofile
+update_config_file .zshrc ~/.zshrc
+update_config_file powerline_config ~/.config/powerline
+source ~/.zshrc
+
 
 if [[ $CONFIGURE_MAC == "true" ]]; then
 	configure_mac
