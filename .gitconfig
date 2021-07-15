@@ -13,3 +13,5 @@
 	username = CodeHex
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+[alias]
+	purge = "!git branch --merged | grep -v '\\*\\|master\\|main\\|develop' | xargs -n 1 git branch -d"
