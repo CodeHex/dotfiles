@@ -330,7 +330,7 @@
         "revision": "9e12ac096242ce8df03d76e20fea3248f7da2da8"
       },
       "homebrew/cask": {
-        "revision": "c5a28c238e286648b2743fb7540a2007b2dfc48d"
+        "revision": "bd2e88c30758d67ce5dfc6091e25c904049225f3"
       }
     }
   },
@@ -339,7 +339,7 @@
       "big_sur": {
         "HOMEBREW_VERSION": "3.2.2",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "214ab8f8c831e7b830d19a96da65571b6aac3221",
+        "Homebrew/homebrew-core": "6b3bd574ec280a1e9daac44d295ba147c39e611b",
         "CLT": "12.5.1.0.1.1623191612",
         "Xcode": "12.5",
         "macOS": "11.4"
