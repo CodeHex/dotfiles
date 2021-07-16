@@ -6,6 +6,7 @@ brew "go"                           # Golang
 brew "gh"                           # Github CLI
 brew "nodenv"                       # Node package manager
 brew "python"                       # Python for powerline
+brew "gnupg"                        # GPG for Github verification
 
 tap "homebrew/cask"
 cask "rectangle"                # Window management app (like Spectacle)
