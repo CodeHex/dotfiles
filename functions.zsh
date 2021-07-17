@@ -185,6 +185,7 @@ function generate_gpg_key_for_github {
 	log_ok "🔑 Generating GPG key..."
 	local GITHUB_NAME=$(git config --global --get user.name)
 	local GITHUB_EMAIL=$(git config --global --get user.email)
+	local USER_ID=$(echo "${GITHUB_NAME} <${GITHUB_EMAIL}>")
 	local PASSPHRASE=$(dd if=/dev/urandom bs=32 count=1 2>/dev/null | base64 | sed 's/=//g')
 
 	gpg --quick-generate-key --yes --batch \
@@ -201,15 +202,19 @@ function generate_gpg_key_for_github {
 	echo $PASSPHRASE | pbcopy
 	log_info "Press any key once passphase has been saved"
 	read -k1 -s
-
-	local KEY_ID=$(gpg --list-secret-keys "${GITHUB_NAME} <${GITHUB_EMAIL}>" | sed -n 2p | xargs)
-	local PUBLIC_KEY=$(gpg --armor --export $KEY_ID)
+	local KEY_ID=$(gpg --list-keys --keyid-format=long $USER_ID | sed -n 1p | awk '{print $2}' | awk -F  "/" '{print $2}')
+	local PUBLIC_KEY=$(gpg --armor --export $USER_ID)
 
 	log_info "GPG Public Key (copied to clipboard)"
 	echo $PUBLIC_KEY | pbcopy
 	echo $PUBLIC_KEY
 	log_warn '\n⚠️  To authenticate Github, follow %F{cyan}https://docs.github.com/en/github/authenticating-to-github/managing-commit-signature-verification/adding-a-new-gpg-key-to-your-github-account#adding-a-gpg-key%f'
 	log_info "Press any key when the public key has been configured in Github"
+	read -k1 -s
+
+	log_warn "Writing signing key $KEY_ID to .gitconfig in dotfiles"
+	git config --file .gitconfig user.signingkey $KEY_ID
+	log_info "Press any key when .gitconfig changes have been commited"
 	read -k1 -s
 	log_ok "✅ Github GPG key configured"
 }

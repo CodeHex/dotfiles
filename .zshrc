@@ -28,5 +28,6 @@ eval "$(nodenv init -)"
 # Initialize Powerline
 . /opt/homebrew/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
 
-# User configuration
+# Ensure GPG can be called from git
+export GPG_TTY=$(tty)
 
