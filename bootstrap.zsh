@@ -19,6 +19,12 @@ else
 fi
 
 update_homebrew_bundle
+
+# Generate GPG key if one is not detected
+if ! git config --global user.signingkey > /dev/null; then 
+	generate_gpg_key_for_github
+fi
+
 update_config_file .gitconfig ~/.gitconfig
 update_config_file .ssh_config ~/.ssh/config
 

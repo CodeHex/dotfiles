@@ -11,7 +11,12 @@
 	name = Ben Ibinson
 	email = ben@ibinson.dev
 	username = CodeHex
+	signingkey = 128CB79C7BE406D9
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
 [alias]
 	purge = "!git branch --merged | grep -v '\\*\\|master\\|main\\|develop' | xargs -n 1 git branch -d"
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
