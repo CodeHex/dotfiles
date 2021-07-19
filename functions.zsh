@@ -272,6 +272,12 @@ function update_config_file {
 	local SOURCE=$1
 	local TARGET=$2
 	log_ok "⚙️  Updating $SOURCE"
+	if [[ ! -e "$TARGET" ]]; then
+		log_info " - created file"
+		cp -a $SOURCE $TARGET
+		return 0
+	fi
+
 	if [[ $(git --no-pager diff --shortstat $TARGET $SOURCE | wc -c) -ne 0 ]]; then
 		log_info " - updates detected"
 		log_warn "view diff? (y/n)"
