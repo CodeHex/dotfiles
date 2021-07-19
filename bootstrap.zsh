@@ -55,7 +55,7 @@ if [[ $CONFIGURE_MAC == "true" ]]; then
 	configure_mac
 fi
 
-update_config_file vscode_settings.json "${HOME}/Library/Application Support/Code/User/settings.json"
+update_config_file vscode/vscode_settings.json "${HOME}/Library/Application Support/Code/User/settings.json"
 
 update_vscode_exts
 install_node $NODE_VERSION

@@ -134,7 +134,7 @@ function configure_mac {
 function update_vscode_exts {
 	log_ok "🖇️  Updating VS Code extensions..."
 	local VSCODE_LIST=$(code --list-extensions)
-	cat vscode_extensions.txt | while read line ; do
+	cat vscode/vscode_extensions.txt | while read line ; do
 		# Determine the ext name by removing any comments and whitespace at the end of the line
 		local VSCODE_EXT=$(echo $line | cut -d '#' -f1 | xargs)
 		
