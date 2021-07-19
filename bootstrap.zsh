@@ -47,6 +47,7 @@ fi
 update_config_file .zprofile ~/.zprofile
 update_config_file .zshrc ~/.zshrc
 update_config_file powerline_config ~/.config/powerline
+update_config_file gpg-agent.conf ~/.gnupg/gpg-agent.conf
 source ~/.zshrc
 
 
