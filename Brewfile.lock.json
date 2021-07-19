@@ -20,7 +20,7 @@
         }
       },
       "firefox": {
-        "version": "90.0",
+        "version": "90.0.1",
         "options": {
           "full_name": "firefox"
         }
@@ -361,19 +361,19 @@
     },
     "tap": {
       "homebrew/cask-fonts": {
-        "revision": "c573a68d656513ecd7c192d184f807b2e3caed55"
+        "revision": "08395c17dfe880bf2cbe1e1ebeb95fd970ba8886"
       },
       "homebrew/cask": {
-        "revision": "0e165babe288590de41cc4d9169ac22f9bb10e43"
+        "revision": "caedf45d7b2af3f3832bd6c0f9f36c1d7770b459"
       }
     }
   },
   "system": {
     "macos": {
       "big_sur": {
-        "HOMEBREW_VERSION": "3.2.2",
+        "HOMEBREW_VERSION": "3.2.3",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "e556c2b0488a1e50eed76602488f9ba0a097867b",
+        "Homebrew/homebrew-core": "07cc58c5898702c9097105a2cc0c8c9f0fca617a",
         "CLT": "12.5.1.0.1.1623191612",
         "Xcode": "12.5",
         "macOS": "11.4"
