@@ -160,7 +160,7 @@ function install_node {
 		nodenv global $VERSION
 		nodenv rehash
 		eval "$(nodenv init -)"
-		log_info" - node $VERSION installed" 
+		log_info " - node $VERSION installed" 
 	fi
 }
 

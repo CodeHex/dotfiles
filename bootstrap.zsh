@@ -4,7 +4,7 @@
 
 # Configure current run
 CONFIGURE_MAC="false"
-NODE_VERSION="16.4.2"    # Use `nodenv install -l` to view all available versions and update this variable
+NODE_VERSION="16.5.0"    # Use `nodenv install -l` to view all available versions and update this variable
 
 # Create default development folder
 mkdir -p /Users/ben/dev
