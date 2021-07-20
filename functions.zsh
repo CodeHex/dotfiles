@@ -148,19 +148,20 @@ function update_vscode_exts {
 }
 
 # Installs a specific version of node globally (which is provided) via nodeenv
-function install_node {
-	local VERSION=$1
-	log_ok "🧊 Installing Node $VERSION..."
-	if nodenv global | grep -q $VERSION; then
-		log_info " - node $VERSION already installed" 
+function upgrade_node {
+	local LATEST=$(nodenv install -l | grep "^[0-9]" | tail -n1)
+	log_ok "🧊 Upgrading Node to $LATEST..."
+	if nodenv global | grep -q $LATEST; then
+		log_info " - node $LATEST already installed" 
 	else
-		log_info " - running $(log_warn '\"nodenv install $VERSION\"')"	
-		nodenv install $VERSION
+		log_info " - uprading from $(nodenv global) to $LATEST" 
+		log_info " - running $(log_warn '\"nodenv install $LATEST\"')"	
+		nodenv install $LATEST
 		log_info " - running $(log_warn '\"nodenv global $VERSION\"')"	
-		nodenv global $VERSION
+		nodenv global $LATEST
 		nodenv rehash
 		eval "$(nodenv init -)"
-		log_info " - node $VERSION installed" 
+		log_info " - node $LATEST installed" 
 	fi
 }
 

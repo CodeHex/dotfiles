@@ -4,7 +4,6 @@
 
 # Configure current run
 CONFIGURE_MAC="false"
-NODE_VERSION="16.5.0"    # Use `nodenv install -l` to view all available versions and update this variable
 
 # Create default development folder
 mkdir -p /Users/ben/dev
@@ -58,6 +57,6 @@ fi
 update_config_file vscode/vscode_settings.json "${HOME}/Library/Application Support/Code/User/settings.json"
 
 update_vscode_exts
-install_node $NODE_VERSION
+upgrade_node
 
 log_ok "🎉 Bootstrap complete!"
