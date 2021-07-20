@@ -9,6 +9,7 @@ export UPDATE_ZSH_DAYS=5
 # Oh My ZSH plugins
 plugins=(
     git
+    git-auto-fetch
 )
 
 source $ZSH/oh-my-zsh.sh
