@@ -252,3 +252,9 @@ function update_config_file {
 	fi
 	return 1
 }
+
+# Restarts the GPG agent so new config is picked up
+function restart_gpg_agent {
+	log_info " - restarting gpg agent"
+	gpg-connect-agent reloadagent /bye
+}

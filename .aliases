@@ -1,8 +1,4 @@
 #!/bin/zsh
 
-# Run update script
-alias update="( cd ~/dev/dotfiles && ./update.zsh )"
-
-# Recursively delete `.DS_Store` files
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-
+# Run update script (use full path to update so zsh highlighting still works)
+alias update="( cd ~/dev/dotfiles && ~/dev/dotfiles/update.zsh )"
