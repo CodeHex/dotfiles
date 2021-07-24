@@ -38,15 +38,14 @@ The scripts perform the following operations
 - **Update MacOSX software** - Runs the software update tool, providing an user option to install any new updates. May cause reboots.
 - **Installs/Updates [Homebrew](https://brew.sh/)** - Ensures Homebrew is installed and updates all installed software via Homebrew.
 - **Updates [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle)** - Installs or removes software based on the [Brewfile](Brewfile) in the root directory.
-- **Setup `.gitconfig` file** - Copies `.gitconfig` settings from the root directory.
+- **Setup `.gitconfig` file**
 - **Generate GPG key for signing git commits** - Checks if a signing key has been configure for git. If not, walks the user through the process of generating a GPG key and configuring it for Github.
-- **Setup `.sshconfig` file** - Copies `.sshconfig` settings from the root directory.
+- **Setup `.sshconfig` file**
 - **Generate SSH key for Github** - Checks if an SSH key is already present (`~/.ssh/id_ed25519`). If not, walks the user through the process of generating an SSH key and configuing it for Github.
 - **Installs [Oh My ZSH](https://ohmyz.sh/)** - Checks if the `~/.zshrc` file exists, and if not installs Oh My ZSH.
 - **Installs [Powerline](https://github.com/powerline/powerline)** - Detects if Powerline is installed and installs it if not.
 - **Configure MacOSC settings** - Applies MacOSX system settings defined in `.macosx`. Can be turned on and off via the `.env` file.
-- **Setup `.zprofile ` file** - Copies `.zprofile` settings from the root directory.
-- **Setup `.zshrc` file** - Copies `.zshrc` settings from the root directory.
+- **Setup `.zprofile`, `aliases` and `.zshrc` files** - Configure ZSH shell
 - **Setup `.powerline_config` files** - Configures Powerline settings and theme.
 - **Setup `gpg-agent.conf` file** - Ensures GPG key is cached for a long time.
 - **Setup `vscode_settings.json` file** - Configures VSCode settings
@@ -57,14 +56,12 @@ The scripts perform the following operations
 - **Update MacOSX software** - Runs the software update tool, providing an user option to install any new updates. May cause reboots.
 - **Updates [Homebrew](https://brew.sh/)** - Updates Homebrew formulae and upgrades all installed software via Homebrew.
 - **Updates [Homebrew Bundle](https://github.com/Homebrew/homebrew-bundle)** - Installs or removes software based on the [Brewfile](Brewfile) in the root directory.
-- **Setup `.gitconfig` file** - Copies `.gitconfig` settings from the root directory.
-- **Setup `.sshconfig` file** - Copies `.sshconfig` settings from the root directory.
-- **Setup `.zshrc` file** - Copies `.zshrc` settings from the root directory.
+- **Setup `.gitconfig` and `.sshconfig` files**
+- **Setup `.zprofile`, `aliases` and `.zshrc` files** - Configure ZSH shell
 - **Setup `.powerline_config` files** - Configures Powerline settings and theme.
 - **Setup `vscode_settings.json` file** - Configures VSCode settings
 - **Updates VSCode extensions** - Ensures that all VSCode extension in `vscode/vscode_extensions.txt` are installed. Does not remove extension that are not on the list.
 - **Install/Upgrade Node** - Detects and updates to the latest version of Node.
-
 
 ## Disclaimer
 
