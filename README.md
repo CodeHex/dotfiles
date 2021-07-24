@@ -44,7 +44,7 @@ The scripts perform the following operations
 - **Generate SSH key for Github** - Checks if an SSH key is already present (`~/.ssh/id_ed25519`). If not, walks the user through the process of generating an SSH key and configuing it for Github.
 - **Installs [Oh My ZSH](https://ohmyz.sh/)** - Checks if the `~/.zshrc` file exists, and if not installs Oh My ZSH.
 - **Installs [Powerline](https://github.com/powerline/powerline)** - Detects if Powerline is installed and installs it if not.
-- **Configure MacOSC settings** - Applies MacOSX system settings defined in `.macosx.zsh`. Can be turned on and off via the `.env` file.
+- **Configure MacOSC settings** - Applies MacOSX system settings defined in `.macosx`. Can be turned on and off via the `.env` file.
 - **Setup `.zprofile ` file** - Copies `.zprofile` settings from the root directory.
 - **Setup `.zshrc` file** - Copies `.zshrc` settings from the root directory.
 - **Setup `.powerline_config` files** - Configures Powerline settings and theme.

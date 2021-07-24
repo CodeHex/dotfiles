@@ -47,7 +47,7 @@ fi
 
 # Configure MacOSX settings
 if [[ $CONFIGURE_MAC == "true" ]]; then
-	. ./.macosx.zsh
+	. ./.macosx
 fi
 
 # Reload the terminal incase any files are updated

@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 log_ok "⚙️  Setting up Mac system settings..."
 
 # Finder: show hidden files by default
@@ -30,7 +32,7 @@ defaults write com.apple.finder AppleShowAllFiles TRUE
 killall Finder
 
 # Show the ~/Library folder
-chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
+chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library >/dev/null 2>&1
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
