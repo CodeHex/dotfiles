@@ -14,6 +14,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# Load aliases
+source ~/.aliases
+
 # Load autosuggestion installed via Homebrew
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

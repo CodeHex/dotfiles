@@ -7,7 +7,7 @@
 . ./.env
 
 # Create default development folder
-mkdir -p "$HOME/dev"
+mkdir -p "~/dev"
 
 update_mac_osx_software
 
@@ -52,6 +52,7 @@ fi
 
 # Reload the terminal incase any files are updated
 update_config_file .zprofile ~/.zprofile
+update_config_file .aliases ~/.aliases
 update_config_file .zshrc ~/.zshrc
 update_config_file powerline_config ~/.config/powerline
 if update_config_file gpg-agent.conf ~/.gnupg/gpg-agent.conf; then

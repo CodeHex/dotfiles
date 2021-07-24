@@ -9,6 +9,7 @@ update_homebrew_bundle
 update_config_file .gitconfig ~/.gitconfig
 update_config_file .ssh_config ~/.ssh/config
 update_config_file .zprofile ~/.zprofile
+update_config_file .aliases ~/.aliases
 update_config_file .zshrc ~/.zshrc
 update_config_file powerline_config ~/.config/powerline
 
