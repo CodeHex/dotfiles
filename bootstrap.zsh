@@ -54,7 +54,10 @@ fi
 update_config_file .zprofile ~/.zprofile
 update_config_file .zshrc ~/.zshrc
 update_config_file powerline_config ~/.config/powerline
-update_config_file gpg-agent.conf ~/.gnupg/gpg-agent.conf
+if update_config_file gpg-agent.conf ~/.gnupg/gpg-agent.conf; then
+	log_info " - restarting gpg agent"
+	gpg-connect-agent reloadagent /bye
+fi
 source ~/.zshrc
 
 update_config_file vscode/vscode_settings.json "${HOME}/Library/Application Support/Code/User/settings.json"
