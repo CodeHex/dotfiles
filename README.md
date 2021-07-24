@@ -66,5 +66,6 @@ The scripts perform the following operations
 - **Install/Upgrade Node** - Detects and updates to the latest version of Node.
 
 
+## Disclaimer
 
-
+**WARNING-Use these files at your own risk** - These files have only been tested on my machine. If you would like to use these files, please review the contents of the scripts, remove anything you don't want or need and ensure you understand what these scripts are doing. Thank you. 

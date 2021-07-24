@@ -7,6 +7,7 @@ brew "gh"                           # Github CLI
 brew "nodenv"                       # Node package manager
 brew "python"                       # Python for powerline
 brew "gnupg"                        # GPG for Github verification
+brew "pinentry-mac"                 # Allow GPG passphrase to be saved to keychain
 
 tap "homebrew/cask"
 cask "rectangle"                # Window management app (like Spectacle)
