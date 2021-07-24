@@ -7,7 +7,7 @@
 . ./.env
 
 # Create default development folder
-mkdir -p "~/dev"
+mkdir -p "$HOME/dev"
 
 update_mac_osx_software
 
@@ -20,7 +20,7 @@ fi
 
 update_homebrew_bundle
 
-update_config_file .gitconfig ~/.gitconfig
+update_git_config
 
 # Generate GPG key if one is not detected
 if ! git config --global user.signingkey > /dev/null; then 
