@@ -15,6 +15,12 @@ Add an `.env` file containing
 # Sets MacOSX settings, causes Finder and Dock to reboot
 # Set to false if MacOSX settings have been applied
 export CONFIGURE_MAC="true"  
+
+# Git settings
+export GIT_NAME="<name>"
+export GIT_EMAIL="<email_address>"
+export GIT_USERNAME="<git_username>"
+export GIT_SIGNING_KEY="<gpg_key_id>"
 ``` 
 
 ## Usage

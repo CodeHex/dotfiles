@@ -190,10 +190,8 @@ function generate_gpg_key_for_github {
 	log_info "Press any key when the public key has been configured in Github"
 	read -k1 -s
 
-	log_warn "Writing signing key $KEY_ID to .gitconfig in dotfiles"
-	git config --file .gitconfig user.signingkey $KEY_ID
-	log_info "Press any key when .gitconfig changes have been commited"
-	read -k1 -s
+	log_warn "Writing signing key $KEY_ID to .env in dotfiles"
+	echo "export GIT_SIGNING_KEY=\"$KEY_ID\"" >> .env
 	log_info "Please remember to check 'Save to keychain' when prompted for GPG passphrase on first signed commit (via commandline)"
 	log_ok "✅ Github GPG key configured"
 }
@@ -251,6 +249,24 @@ function update_config_file {
 		log_info " - no changes detected"
 	fi
 	return 1
+}
+
+# Updates git config by using user information in .env
+function update_git_config {
+	# Make a copy of .gitconfig
+	cp .gitconfig .gitconfig_with_user
+
+	# Update file with user info
+	git config --file .gitconfig_with_user user.name $GIT_NAME
+	git config --file .gitconfig_with_user user.email $GIT_EMAIL
+	git config --file .gitconfig_with_user user.username $GIT_USERNAME
+	git config --file .gitconfig_with_user user.signingkey $GIT_SIGNING_KEY
+
+	# Use the file with user info to update the config
+	update_config_file .gitconfig_with_user ~/.gitconfig
+
+	# Remove the file with user info
+	rm .gitconfig_with_user
 }
 
 # Restarts the GPG agent so new config is picked up

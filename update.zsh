@@ -1,12 +1,13 @@
 #!/bin/zsh
 
+. ./.env
 . ./.functions --source-only
 
 update_mac_osx_software
 update_homebrew
 update_homebrew_bundle
 
-update_config_file .gitconfig ~/.gitconfig
+update_git_config
 update_config_file .ssh_config ~/.ssh/config
 
 SOURCE_ZSH=0
