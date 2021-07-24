@@ -11,7 +11,12 @@ update_config_file .ssh_config ~/.ssh/config
 update_config_file .zprofile ~/.zprofile
 update_config_file .zshrc ~/.zshrc
 update_config_file powerline_config ~/.config/powerline
-update_config_file gpg-agent.conf ~/.gnupg/gpg-agent.conf
+
+if update_config_file gpg-agent.conf ~/.gnupg/gpg-agent.conf; then
+	log_info " - restarting gpg agent"
+	gpg-connect-agent reloadagent /bye
+fi
+
 update_config_file vscode/vscode_settings.json "${HOME}/Library/Application Support/Code/User/settings.json"
 
 update_vscode_exts

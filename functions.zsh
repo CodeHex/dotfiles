@@ -202,6 +202,7 @@ function generate_gpg_key_for_github {
 	git config --file .gitconfig user.signingkey $KEY_ID
 	log_info "Press any key when .gitconfig changes have been commited"
 	read -k1 -s
+	log_info "Please remember to check 'Save to keychain' when prompted for GPG passphrase on first signed commit (via commandline)"
 	log_ok "✅ Github GPG key configured"
 }
 
