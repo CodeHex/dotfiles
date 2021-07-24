@@ -58,15 +58,6 @@ function update_homebrew {
 	log_info " - Homebrew updated"
 }
 
-# Installs homebrew if not installed, otherwise update it
-function install_or_update_homebrew {
-	if [[ $(command -v brew) == "" ]]; then
-		install_homebrew
-	else
-		update_homebrew
-	fi
-}
-
 # Updates the homebrew bundle apps, install apps that are missing and removing apps that
 # are not specified in the Brewfile (requires user confirmation)
 function update_homebrew_bundle {
@@ -99,13 +90,12 @@ function update_vscode_exts {
 		# Determine the ext name by removing any comments and whitespace at the end of the line
 		local VSCODE_EXT=$(echo $line | cut -d '#' -f1 | xargs)
 		
-		if echo $VSCODE_LIST | grep -q $VSCODE_EXT; then
-			log_info " - $VSCODE_EXT already installed"
-		else
+		if ! echo $VSCODE_LIST | grep -q $VSCODE_EXT; then
 			code --install-extension $VSCODE_EXT
 			log_info " - $VSCODE_EXT installed"
 		fi
 	done
+	log_info " - extenstions up to date"
 }
 
 # Installs a specific version of node globally (which is provided) via nodeenv
@@ -113,7 +103,7 @@ function upgrade_node {
 	local LATEST=$(nodenv install -l | grep "^[0-9]" | tail -n1)
 	log_ok "🧊 Upgrading Node to $LATEST..."
 	if nodenv global | grep -q $LATEST; then
-		log_info " - node $LATEST already installed" 
+		log_info " - version already installed" 
 	else
 		log_info " - uprading from $(nodenv global) to $LATEST" 
 		log_info " - running $(log_warn '\"nodenv install $LATEST\"')"	
