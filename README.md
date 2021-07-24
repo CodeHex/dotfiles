@@ -71,4 +71,4 @@ The scripts perform the following operations
 
 ## Disclaimer
 
-**WARNING-Use these files at your own risk** - These files have only been tested on my machine. If you would like to use these files, please review the contents of the scripts, remove anything you don't want or need and ensure you understand what these scripts are doing. Thank you. 
+**WARNING: Use these files at your own risk** - These files have only been tested on my machine. If you would like to use these files, please review the contents of the scripts, remove anything you don't want or need and ensure you understand what these scripts are doing. Thank you. 
