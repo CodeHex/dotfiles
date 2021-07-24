@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-. ./functions.zsh --source-only
+. ./.functions --source-only
 
 update_mac_osx_software
 update_homebrew

@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 function log_ok { print -P "%F{green}$1%f"; }
 function log_warn { print -P "%F{yellow}$1%f"; }
 function log_info { print -P "%F{cyan}$1%f"; }

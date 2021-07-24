@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Import bootstrapping functions
-. ./functions.zsh --source-only
+. ./.functions --source-only
 
 # Configure current run
 . ./.env
