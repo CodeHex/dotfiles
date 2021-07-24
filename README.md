@@ -17,10 +17,10 @@ Add an `.env` file containing
 export CONFIGURE_MAC="true"  
 
 # Git settings
-export GIT_NAME="<name>"
-export GIT_EMAIL="<email_address>"
-export GIT_USERNAME="<git_username>"
-export GIT_SIGNING_KEY="<gpg_key_id>"
+export GIT_NAME="<name>"                # e.g. export GIT_NAME="Linda Ashbrook"
+export GIT_EMAIL="<email_address>"      # e.g. export GIT_EMAIL="linda.ashbrook@gmail.com"
+export GIT_USERNAME="<git_username>"    # e.g. export GIT_USERNAME="lindash"
+export GIT_SIGNING_KEY="<gpg_key_id>"   # e.g. export GIT_SIGNING_KEY="1234ABCD7890EF01"
 ``` 
 
 ## Usage
