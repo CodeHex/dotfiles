@@ -26,8 +26,9 @@ source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
-# Initialize node
+# Initialize node and ruby
 eval "$(nodenv init -)"
+eval "$(rbenv init -)"
 
 # Initialize Powerline
 . /opt/homebrew/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh

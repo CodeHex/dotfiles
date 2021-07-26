@@ -24,8 +24,10 @@ update_config_file vscode/vscode_settings.json "${HOME}/Library/Application Supp
 
 update_vscode_exts
 upgrade_node
+upgrade_ruby
 
 log_ok "🎉 Update complete!"
 if [ "$SOURCE_ZSH" = '1' ]; then
-    log_warn "⚠️  Please run 'source ~/.zshrc' to load recent changes"
+    echo "source ~/.zshrc" | pbcopy
+    log_warn "⚠️  Please run 'source ~/.zshrc' (copied to clipboard) to load recent changes"
 fi
