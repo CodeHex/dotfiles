@@ -5,6 +5,7 @@ brew "zsh-history-substring-search" # History search
 brew "go"                           # Golang
 brew "gh"                           # Github CLI
 brew "nodenv"                       # Node package manager
+brew "rbenv"                        # Ruby package manager
 brew "python"                       # Python for powerline
 brew "gnupg"                        # GPG for Github verification
 brew "pinentry-mac"                 # Allow GPG passphrase to be saved to keychain

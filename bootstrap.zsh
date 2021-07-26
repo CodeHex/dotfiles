@@ -67,5 +67,6 @@ upgrade_node
 
 log_ok "🎉 Bootstrap complete!"
 if [ "$SOURCE_ZSH" = '1' ]; then
-    log_warn "⚠️  Please run 'source ~/.zshrc' to load recent changes"
+    echo "source ~/.zshrc" | pbcopy
+    log_warn "⚠️  Please run 'source ~/.zshrc' (copied to clipboard) to load recent changes"
 fi

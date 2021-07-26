@@ -98,7 +98,7 @@ function update_vscode_exts {
 	log_info " - extenstions up to date"
 }
 
-# Installs a specific version of node globally (which is provided) via nodeenv
+# Installs the latest version of node globally via nodeenv
 function upgrade_node {
 	local LATEST=$(nodenv install -l | grep "^[0-9]" | tail -n1)
 	log_ok "🧊 Upgrading Node to $LATEST..."
@@ -106,13 +106,31 @@ function upgrade_node {
 		log_info " - version already installed" 
 	else
 		log_info " - uprading from $(nodenv global) to $LATEST" 
-		log_info " - running $(log_warn '\"nodenv install $LATEST\"')"	
+		log_info " - running $(log_warn "\"nodenv install $LATEST\"")"	
 		nodenv install $LATEST
-		log_info " - running $(log_warn '\"nodenv global $VERSION\"')"	
+		log_info " - running $(log_warn "\"nodenv global $LATEST\"")"	
 		nodenv global $LATEST
 		nodenv rehash
 		eval "$(nodenv init -)"
 		log_info " - node $LATEST installed" 
+	fi
+}
+
+# Installs the latest version of ruby globally via rbenv
+function upgrade_ruby {
+	local LATEST=$(rbenv install -l 2>&1 | grep "^[0-9]" | tail -n1)
+	log_ok "🧊 Upgrading Ruby to $LATEST..."
+	if rbenv global | grep -q $LATEST; then
+		log_info " - version already installed" 
+	else
+		log_info " - uprading from $(rbenv global) to $LATEST" 
+		log_info " - running $(log_warn "\"rbenv install ${LATEST}\"")"	
+		rbenv install $LATEST
+		log_info " - running $(log_warn "\"rbenv global ${LATEST}\"")"	
+		rbenv global $LATEST
+		rbenv rehash
+		eval "$(rbenv init -)"
+		log_info " - ruby $LATEST installed" 
 	fi
 }
 
