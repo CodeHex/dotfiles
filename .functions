@@ -134,6 +134,17 @@ function upgrade_ruby {
 	fi
 }
 
+# Installs the latest version of terraform globally via tfenv
+function upgrade_terraform {
+	log_ok "🧊 Upgrading Terrafrom to latest..."
+	LATEST=$(tfenv install latest)
+	if echo $LATEST | grep "is already installed" > /dev/null; then
+		log_info " - $LATEST"
+	else
+		tfenv use latest
+	fi
+}
+
 # Generates an SSH key for authentication with Github
 function generate_ssh_key_for_github {
 	log_ok "🔑 Generating SSH key for Github..."

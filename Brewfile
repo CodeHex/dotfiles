@@ -4,8 +4,12 @@ brew "zsh-syntax-highlighting"      # Syntax highlighting for zsh
 brew "zsh-history-substring-search" # History search
 brew "go"                           # Golang
 brew "gh"                           # Github CLI
-brew "nodenv"                       # Node package manager
-brew "rbenv"                        # Ruby package manager
+brew "nodenv"                       # Node manager
+brew "rbenv"                        # Ruby manager
+brew "tfenv"                        # Terraform manager
+brew "grep"                         # - Required for terraform
+brew "pcre"                         # - Required for terraform
+brew "yarn"                         # Yarn for rails projects
 brew "python"                       # Python for powerline
 brew "gnupg"                        # GPG for Github verification
 brew "pinentry-mac"                 # Allow GPG passphrase to be saved to keychain
