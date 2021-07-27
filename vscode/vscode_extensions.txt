@@ -3,3 +3,4 @@ golang.go
 mohsen1.prettify-json
 RobbOwen.synthwave-vscode       # Run 'Enable Neon Dreams' in VS Code to activate glow
 lehni.vscode-fix-checksums      # Run 'Fix Checksums: Apply' in VS Code to remove corrupt warning after install Neon Dreams
+hashicorp.terraform
