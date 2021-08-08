@@ -26,6 +26,7 @@ cask "zoom"                     # Zoom video conferencing
 cask "spotify"                  # Music
 cask "twitch"                   # Twitch
 cask "obsidian"                 # Note taking
+cask "google-drive"             # Google Drive
 
 tap "homebrew/cask-fonts"
 cask "font-jetbrains-mono"      # Coding font
