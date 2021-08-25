@@ -13,6 +13,7 @@ brew "yarn"                         # Yarn for rails projects
 brew "python"                       # Python for powerline
 brew "gnupg"                        # GPG for Github verification
 brew "pinentry-mac"                 # Allow GPG passphrase to be saved to keychain
+brew "svn"                          # Required for font downloads
 
 tap "homebrew/cask"
 cask "rectangle"                # Window management app (like Spectacle)
@@ -30,3 +31,4 @@ cask "google-drive"             # Google Drive
 
 tap "homebrew/cask-fonts"
 cask "font-jetbrains-mono"      # Coding font
+cask "font-inconsolata"         # Monospace font
