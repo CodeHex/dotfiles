@@ -28,6 +28,7 @@ cask "spotify"                  # Music
 cask "twitch"                   # Twitch
 cask "obsidian"                 # Note taking
 cask "google-drive"             # Google Drive
+cask "dropbox"                  # Dropbox sync
 
 tap "homebrew/cask-fonts"
 cask "font-jetbrains-mono"      # Coding font
