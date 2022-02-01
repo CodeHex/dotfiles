@@ -36,3 +36,6 @@ eval "$(rbenv init -)"
 # Ensure GPG can be called from git
 export GPG_TTY=$(tty)
 
+# Add installed go binaries to the path
+export PATH=$PATH:~/go/bin
+

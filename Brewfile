@@ -14,6 +14,8 @@ brew "python"                       # Python for powerline
 brew "gnupg"                        # GPG for Github verification
 brew "pinentry-mac"                 # Allow GPG passphrase to be saved to keychain
 brew "svn"                          # Required for font downloads
+brew "graphviz"                     # Go pprof visualizations
+brew "hugo"                         # Hugo websites
 
 tap "homebrew/cask"
 cask "rectangle"                # Window management app (like Spectacle)
@@ -29,6 +31,7 @@ cask "twitch"                   # Twitch
 cask "obsidian"                 # Note taking
 cask "google-drive"             # Google Drive
 cask "dropbox"                  # Dropbox sync
+cask "steam"                    # Steam
 
 tap "homebrew/cask-fonts"
 cask "font-jetbrains-mono"      # Coding font
