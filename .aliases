@@ -2,3 +2,6 @@
 
 # Run update script (use full path to update so zsh highlighting still works)
 alias update="( cd ~/dev/dotfiles && ~/dev/dotfiles/update.zsh )"
+
+# Delete all branches that have been merged into the current branch
+alias gitpurge="git branch --merged | egrep -v \"(^\*|master|main|dev)\" | xargs git branch -d"
