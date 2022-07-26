@@ -20,6 +20,7 @@ brew "hugo"                         # Hugo websites
 tap "homebrew/cask"
 cask "rectangle"                # Window management app (like Spectacle)
 cask "iterm2"                   # Terminal replacement
+cask "flutter"                  # Flutter app framework (https://flutter.dev/)
 cask "visual-studio-code"       # VSCode editor
 cask "sourcetree"               # Git GUI
 cask "p4v"                      # P4Merge tool
@@ -27,7 +28,6 @@ cask "firefox"                  # Browser of choice
 cask "1password"                # Password manager
 cask "zoom"                     # Zoom video conferencing
 cask "spotify"                  # Music
-cask "twitch"                   # Twitch
 cask "obsidian"                 # Note taking
 cask "google-drive"             # Google Drive
 cask "dropbox"                  # Dropbox sync
