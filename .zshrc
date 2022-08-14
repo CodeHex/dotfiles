@@ -39,3 +39,5 @@ export GPG_TTY=$(tty)
 # Add installed go binaries to the path
 export PATH=$PATH:~/go/bin
 
+# Add default location for my weather app
+export WX_QUERY=Patchway
