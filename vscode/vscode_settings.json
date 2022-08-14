@@ -4,5 +4,6 @@
     "editor.fontSize": 13,
     "editor.fontLigatures": true,
     "editor.renderWhitespace": "all",
-    "editor.inlineSuggest.enabled": true
+    "editor.inlineSuggest.enabled": true,
+    "go.toolsManagement.autoUpdate": true
 }
