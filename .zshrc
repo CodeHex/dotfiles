@@ -26,18 +26,9 @@ source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
-# Initialize node and ruby
-eval "$(nodenv init -)"
-eval "$(rbenv init -)"
-
 # Initialize Powerline
 . /opt/homebrew/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # Ensure GPG can be called from git
 export GPG_TTY=$(tty)
 
-# Add installed go binaries to the path
-export PATH=$PATH:~/go/bin
-
-# Add default location for my weather app
-export WX_QUERY=Patchway

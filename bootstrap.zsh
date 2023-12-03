@@ -63,8 +63,6 @@ fi
 update_config_file vscode/vscode_settings.json "${HOME}/Library/Application Support/Code/User/settings.json"
 
 update_vscode_exts
-upgrade_node
-upgrade_ruby
 upgrade_terraform
 
 log_ok "🎉 Bootstrap complete!"
